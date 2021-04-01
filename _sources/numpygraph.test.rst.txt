@@ -4,6 +4,14 @@ numpygraph.test package
 Submodules
 ----------
 
+numpygraph.test.dataset\_load\_test module
+------------------------------------------
+
+.. automodule:: numpygraph.test.dataset_load_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 numpygraph.test.dataset\_make\_test module
 ------------------------------------------
 
