@@ -20,6 +20,14 @@ numpygraph.test.dataset\_make\_test module
    :undoc-members:
    :show-inheritance:
 
+numpygraph.test.graph\_api\_test module
+---------------------------------------
+
+.. automodule:: numpygraph.test.graph_api_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 numpygraph.test.hello\_test module
 ----------------------------------
 
