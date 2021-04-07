@@ -20,10 +20,10 @@ numpygraph.test.dataset\_make\_test module
    :undoc-members:
    :show-inheritance:
 
-numpygraph.test.graph\_api\_test module
+numpygraph.test.graph\_api\_text module
 ---------------------------------------
 
-.. automodule:: numpygraph.test.graph_api_test
+.. automodule:: numpygraph.test.graph_api_text
    :members:
    :undoc-members:
    :show-inheritance:
