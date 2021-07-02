@@ -1,0 +1,30 @@
+numpygraph.tinydag package
+==========================
+
+Submodules
+----------
+
+numpygraph.tinydag.logger module
+--------------------------------
+
+.. automodule:: numpygraph.tinydag.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+numpygraph.tinydag.tinydag module
+---------------------------------
+
+.. automodule:: numpygraph.tinydag.tinydag
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: numpygraph.tinydag
+   :members:
+   :undoc-members:
+   :show-inheritance:
