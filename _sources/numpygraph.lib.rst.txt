@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    numpygraph.lib.npg
 
@@ -18,7 +19,6 @@ numpygraph.lib.splitfile module
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

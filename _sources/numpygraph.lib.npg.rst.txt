@@ -12,7 +12,6 @@ numpygraph.lib.npg.command module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

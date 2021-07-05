@@ -36,7 +36,6 @@ numpygraph.core.parse module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

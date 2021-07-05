@@ -12,7 +12,6 @@ numpygraph.datasets.make\_neo4j\_csv module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 
