@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -198,23 +200,23 @@
 </div>
 <div class="section" id="module-numpygraph.lib.splitfile">
 <span id="numpygraph-lib-splitfile-module"></span><h2>numpygraph.lib.splitfile module<a class="headerlink" href="#module-numpygraph.lib.splitfile" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="numpygraph.lib.splitfile.SplitFile">
-<em class="property">class </em><code class="sig-prename descclassname">numpygraph.lib.splitfile.</code><code class="sig-name descname">SplitFile</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">_from</em>, <em class="sig-param">_to</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="numpygraph.lib.splitfile.SplitFile">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.lib.splitfile.</span></span><span class="sig-name descname"><span class="pre">SplitFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_to</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>分片文件</p>
-<dl class="method">
-<dt id="numpygraph.lib.splitfile.SplitFile.split">
-<em class="property">static </em><code class="sig-name descname">split</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">num</em>, <em class="sig-param">jump=0</em>, <em class="sig-param">dist_random=False</em>, <em class="sig-param">single_threshold=1048576</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.split" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.lib.splitfile.SplitFile.split">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jump</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist_random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1048576</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.split" title="Permalink to this definition">¶</a></dt>
 <dd><p>dist_random: 文件是否采用随机切割
 True: 随机切割
 False: 均匀切割
 single_threshold: 文件小于该值不做切割</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.lib.splitfile.SplitFile.tell">
-<code class="sig-name descname">tell</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.tell" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.lib.splitfile.SplitFile.tell">
+<span class="sig-name descname"><span class="pre">tell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.tell" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -223,13 +225,13 @@ single_threshold: 文件小于该值不做切割</p>
 <div class="section" id="module-numpygraph.lib">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-numpygraph.lib" title="Permalink to this headline">¶</a></h2>
 <p>Directory structure “lib” means same as “utils” or “tools” imitated from Numpy repository</p>
-<dl class="class">
-<dt id="numpygraph.lib.CommandClient">
-<em class="property">class </em><code class="sig-prename descclassname">numpygraph.lib.</code><code class="sig-name descname">CommandClient</code><a class="headerlink" href="#numpygraph.lib.CommandClient" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="numpygraph.lib.CommandClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.lib.</span></span><span class="sig-name descname"><span class="pre">CommandClient</span></span><a class="headerlink" href="#numpygraph.lib.CommandClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="method">
-<dt id="numpygraph.lib.CommandClient.main">
-<code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.CommandClient.main" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.lib.CommandClient.main">
+<span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.CommandClient.main" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

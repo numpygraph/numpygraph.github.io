@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -185,51 +187,51 @@
 </div>
 <div class="section" id="module-numpygraph.core.arraydict">
 <span id="numpygraph-core-arraydict-module"></span><h2>numpygraph.core.arraydict module<a class="headerlink" href="#module-numpygraph.core.arraydict" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="numpygraph.core.arraydict.HashSplitDict">
-<em class="property">class </em><code class="sig-prename descclassname">numpygraph.core.arraydict.</code><code class="sig-name descname">HashSplitDict</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">dtype=&lt;class 'numpy.int32'&gt;</em>, <em class="sig-param">hlen=64</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.HashSplitDict" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.HashSplitDict">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.core.arraydict.</span></span><span class="sig-name descname"><span class="pre">HashSplitDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">path</span></em>, <em class="sig-param"><span class="pre">dtype=&lt;class</span> <span class="pre">'numpy.int32'&gt;</span></em>, <em class="sig-param"><span class="pre">hlen=64</span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.HashSplitDict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>分块字典集中管理</p>
 </dd></dl>
 
-<dl class="class">
-<dt id="numpygraph.core.arraydict.ArrayDict">
-<em class="property">class </em><code class="sig-prename descclassname">numpygraph.core.arraydict.</code><code class="sig-name descname">ArrayDict</code><span class="sig-paren">(</span><em class="sig-param">item_size=None</em>, <em class="sig-param">hash_heap_rate=0.5</em>, <em class="sig-param">memmap=False</em>, <em class="sig-param">memmap_path=None</em>, <em class="sig-param">memmap_mode='r+'</em>, <em class="sig-param">value_dtype=&lt;class 'numpy.int32'&gt;</em>, <em class="sig-param">item_get_cursor=False</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.core.arraydict.</span></span><span class="sig-name descname"><span class="pre">ArrayDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">item_size=None</span></em>, <em class="sig-param"><span class="pre">hash_heap_rate=0.5</span></em>, <em class="sig-param"><span class="pre">memmap=False</span></em>, <em class="sig-param"><span class="pre">memmap_path=None</span></em>, <em class="sig-param"><span class="pre">memmap_mode='r+'</span></em>, <em class="sig-param"><span class="pre">value_dtype=&lt;class</span> <span class="pre">'numpy.int32'&gt;</span></em>, <em class="sig-param"><span class="pre">item_get_cursor=False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>基于numpy memmap 实现的字典</p>
-<dl class="attribute">
-<dt id="numpygraph.core.arraydict.ArrayDict.WITHOUT_NEXT_MAGIC">
-<code class="sig-name descname">WITHOUT_NEXT_MAGIC</code><em class="property"> = -1</em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.WITHOUT_NEXT_MAGIC" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict.WITHOUT_NEXT_MAGIC">
+<span class="sig-name descname"><span class="pre">WITHOUT_NEXT_MAGIC</span></span><em class="property"> <span class="pre">=</span> <span class="pre">-1</span></em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.WITHOUT_NEXT_MAGIC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="numpygraph.core.arraydict.ArrayDict.CONFIG_CHAIN_CURSOR">
-<code class="sig-name descname">CONFIG_CHAIN_CURSOR</code><em class="property"> = -1</em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.CONFIG_CHAIN_CURSOR" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict.CONFIG_CHAIN_CURSOR">
+<span class="sig-name descname"><span class="pre">CONFIG_CHAIN_CURSOR</span></span><em class="property"> <span class="pre">=</span> <span class="pre">-1</span></em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.CONFIG_CHAIN_CURSOR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="numpygraph.core.arraydict.ArrayDict.CONFIG_ITEM_SIZE">
-<code class="sig-name descname">CONFIG_ITEM_SIZE</code><em class="property"> = -2</em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.CONFIG_ITEM_SIZE" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict.CONFIG_ITEM_SIZE">
+<span class="sig-name descname"><span class="pre">CONFIG_ITEM_SIZE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">-2</span></em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.CONFIG_ITEM_SIZE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="numpygraph.core.arraydict.ArrayDict.CONFIG_HASH_HEAP_SIZE">
-<code class="sig-name descname">CONFIG_HASH_HEAP_SIZE</code><em class="property"> = -3</em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.CONFIG_HASH_HEAP_SIZE" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict.CONFIG_HASH_HEAP_SIZE">
+<span class="sig-name descname"><span class="pre">CONFIG_HASH_HEAP_SIZE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">-3</span></em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.CONFIG_HASH_HEAP_SIZE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="numpygraph.core.arraydict.ArrayDict.file_path">
-<code class="sig-name descname">file_path</code><em class="property"> = ''</em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.file_path" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict.file_path">
+<span class="sig-name descname"><span class="pre">file_path</span></span><em class="property"> <span class="pre">=</span> <span class="pre">''</span></em><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.file_path" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.arraydict.ArrayDict.get_value">
-<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param">cursor</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.get_value" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.get_value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.arraydict.ArrayDict.set_value">
-<code class="sig-name descname">set_value</code><span class="sig-paren">(</span><em class="sig-param">cursor</em>, <em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.set_value" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.arraydict.ArrayDict.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cursor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraydict.ArrayDict.set_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>插入存在链表的新增关系， 这部分要保证 cursor 不允许重复</p>
 </dd></dl>
 
@@ -238,9 +240,9 @@
 </div>
 <div class="section" id="module-numpygraph.core.arraylist">
 <span id="numpygraph-core-arraylist-module"></span><h2>numpygraph.core.arraylist module<a class="headerlink" href="#module-numpygraph.core.arraylist" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="numpygraph.core.arraylist.ArrayList">
-<em class="property">class </em><code class="sig-prename descclassname">numpygraph.core.arraylist.</code><code class="sig-name descname">ArrayList</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">chunk_size=1000000</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="numpygraph.core.arraylist.ArrayList">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.core.arraylist.</span></span><span class="sig-name descname"><span class="pre">ArrayList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>基于numpy memmap 实现的列表
 .. todo:</p>
@@ -248,24 +250,24 @@
 <span class="n">merge后表的读取</span>
 </pre></div>
 </div>
-<dl class="method">
-<dt id="numpygraph.core.arraylist.ArrayList.flush">
-<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.flush" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.arraylist.ArrayList.flush">
+<span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.flush" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.arraylist.ArrayList.append">
-<code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.append" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.arraylist.ArrayList.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.append" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.arraylist.ArrayList.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">merge=True</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.close" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.arraylist.ArrayList.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">merge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.close" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.arraylist.ArrayList.path">
-<code class="sig-name descname">path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.path" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.arraylist.ArrayList.path">
+<span class="sig-name descname"><span class="pre">path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.arraylist.ArrayList.path" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -273,36 +275,36 @@
 </div>
 <div class="section" id="module-numpygraph.core.hash">
 <span id="numpygraph-core-hash-module"></span><h2>numpygraph.core.hash module<a class="headerlink" href="#module-numpygraph.core.hash" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="numpygraph.core.hash.chash">
-<code class="sig-prename descclassname">numpygraph.core.hash.</code><code class="sig-name descname">chash</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">s</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.hash.chash" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="numpygraph.core.hash.chash">
+<span class="sig-prename descclassname"><span class="pre">numpygraph.core.hash.</span></span><span class="sig-name descname"><span class="pre">chash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.hash.chash" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <div class="section" id="module-numpygraph.core.parse">
 <span id="numpygraph-core-parse-module"></span><h2>numpygraph.core.parse module<a class="headerlink" href="#module-numpygraph.core.parse" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="numpygraph.core.parse.Parse">
-<em class="property">class </em><code class="sig-prename descclassname">numpygraph.core.parse.</code><code class="sig-name descname">Parse</code><a class="headerlink" href="#numpygraph.core.parse.Parse" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="numpygraph.core.parse.Parse">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.core.parse.</span></span><span class="sig-name descname"><span class="pre">Parse</span></span><a class="headerlink" href="#numpygraph.core.parse.Parse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="attribute">
-<dt id="numpygraph.core.parse.Parse.data_type">
-<code class="sig-name descname">data_type</code><em class="property"> = {'bool': &lt;class 'bool'&gt;, 'float': &lt;class 'float'&gt;, 'int': &lt;class 'int'&gt;, 'int32': &lt;class 'numpy.int32'&gt;, 'int64': &lt;class 'numpy.int64'&gt;, 'str': &lt;class 'str'&gt;}</em><a class="headerlink" href="#numpygraph.core.parse.Parse.data_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="numpygraph.core.parse.Parse.data_type">
+<span class="sig-name descname"><span class="pre">data_type</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'bool':</span> <span class="pre">&lt;class</span> <span class="pre">'bool'&gt;,</span> <span class="pre">'float':</span> <span class="pre">&lt;class</span> <span class="pre">'float'&gt;,</span> <span class="pre">'int':</span> <span class="pre">&lt;class</span> <span class="pre">'int'&gt;,</span> <span class="pre">'int32':</span> <span class="pre">&lt;class</span> <span class="pre">'numpy.int32'&gt;,</span> <span class="pre">'int64':</span> <span class="pre">&lt;class</span> <span class="pre">'numpy.int64'&gt;,</span> <span class="pre">'str':</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;}</span></em><a class="headerlink" href="#numpygraph.core.parse.Parse.data_type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.parse.Parse.str2bool">
-<em class="property">static </em><code class="sig-name descname">str2bool</code><span class="sig-paren">(</span><em class="sig-param">str_value</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.parse.Parse.str2bool" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.parse.Parse.str2bool">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">str2bool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.parse.Parse.str2bool" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.parse.Parse.get_type">
-<em class="property">static </em><code class="sig-name descname">get_type</code><span class="sig-paren">(</span><em class="sig-param">type_as_string</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.parse.Parse.get_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.parse.Parse.get_type">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_as_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.parse.Parse.get_type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="numpygraph.core.parse.Parse.get_value">
-<em class="property">static </em><code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param">value_type</em>, <em class="sig-param">value_as_string</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.parse.Parse.get_value" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="numpygraph.core.parse.Parse.get_value">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_as_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.core.parse.Parse.get_value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
