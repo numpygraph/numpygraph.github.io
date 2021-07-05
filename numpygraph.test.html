@@ -96,11 +96,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-context-module">numpygraph.context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.context">numpygraph.context module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-dag-load-module">numpygraph.dag_load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-load-module">numpygraph.load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-mergeindex-module">numpygraph.mergeindex module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-read-module">numpygraph.read module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.load">numpygraph.load module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.mergeindex">numpygraph.mergeindex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.read">numpygraph.read module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph">Module contents</a></li>
 </ul>
 </li>
@@ -188,8 +188,39 @@
 <div class="section" id="module-numpygraph.test.dataset_make_test">
 <span id="numpygraph-test-dataset-make-test-module"></span><h2>numpygraph.test.dataset_make_test module<a class="headerlink" href="#module-numpygraph.test.dataset_make_test" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="numpygraph-test-graph-api-text-module">
-<h2>numpygraph.test.graph_api_text module<a class="headerlink" href="#numpygraph-test-graph-api-text-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-numpygraph.test.graph_api_text">
+<span id="numpygraph-test-graph-api-text-module"></span><h2>numpygraph.test.graph_api_text module<a class="headerlink" href="#module-numpygraph.test.graph_api_text" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="numpygraph.test.graph_api_text.fetch_node_attr">
+<code class="sig-prename descclassname">numpygraph.test.graph_api_text.</code><code class="sig-name descname">fetch_node_attr</code><span class="sig-paren">(</span><em class="sig-param">_id</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.graph_api_text.fetch_node_attr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="numpygraph.test.graph_api_text.fetch_edge_attr">
+<code class="sig-prename descclassname">numpygraph.test.graph_api_text.</code><code class="sig-name descname">fetch_edge_attr</code><span class="sig-paren">(</span><em class="sig-param">fid</em>, <em class="sig-param">tid</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.graph_api_text.fetch_edge_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>From node id, to node id</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="numpygraph.test.graph_api_text.fetch_node_neibor_nodes">
+<code class="sig-prename descclassname">numpygraph.test.graph_api_text.</code><code class="sig-name descname">fetch_node_neibor_nodes</code><span class="sig-paren">(</span><em class="sig-param">_id</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.graph_api_text.fetch_node_neibor_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="numpygraph.test.graph_api_text.fetch_node_neibor_edges">
+<code class="sig-prename descclassname">numpygraph.test.graph_api_text.</code><code class="sig-name descname">fetch_node_neibor_edges</code><span class="sig-paren">(</span><em class="sig-param">_id</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.graph_api_text.fetch_node_neibor_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="numpygraph.test.graph_api_text.sample_node_with_degree">
+<code class="sig-prename descclassname">numpygraph.test.graph_api_text.</code><code class="sig-name descname">sample_node_with_degree</code><span class="sig-paren">(</span><em class="sig-param">_id, degree=[4, 4, 4]</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.graph_api_text.sample_node_with_degree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="numpygraph.test.graph_api_text.random_sample_nodes">
+<code class="sig-prename descclassname">numpygraph.test.graph_api_text.</code><code class="sig-name descname">random_sample_nodes</code><span class="sig-paren">(</span><em class="sig-param">_id</em>, <em class="sig-param">size=0</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.graph_api_text.random_sample_nodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-numpygraph.test.hello_test">
 <span id="numpygraph-test-hello-test-module"></span><h2>numpygraph.test.hello_test module<a class="headerlink" href="#module-numpygraph.test.hello_test" title="Permalink to this headline">¶</a></h2>

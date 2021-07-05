@@ -97,11 +97,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-context-module">numpygraph.context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.context">numpygraph.context module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-dag-load-module">numpygraph.dag_load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-load-module">numpygraph.load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-mergeindex-module">numpygraph.mergeindex module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-read-module">numpygraph.read module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.load">numpygraph.load module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.mergeindex">numpygraph.mergeindex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.read">numpygraph.read module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph">Module contents</a></li>
 </ul>
 </li>
@@ -186,8 +186,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="numpygraph.lib.npg.html">numpygraph.lib.npg package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="numpygraph.lib.npg.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="numpygraph.lib.npg.html#numpygraph-lib-npg-command-module">numpygraph.lib.npg.command module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="numpygraph.lib.npg.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numpygraph.lib.npg.html#module-numpygraph.lib.npg.command">numpygraph.lib.npg.command module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numpygraph.lib.npg.html#module-numpygraph.lib.npg">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -196,11 +196,44 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="numpygraph-lib-splitfile-module">
-<h2>numpygraph.lib.splitfile module<a class="headerlink" href="#numpygraph-lib-splitfile-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-numpygraph.lib.splitfile">
+<span id="numpygraph-lib-splitfile-module"></span><h2>numpygraph.lib.splitfile module<a class="headerlink" href="#module-numpygraph.lib.splitfile" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="numpygraph.lib.splitfile.SplitFile">
+<em class="property">class </em><code class="sig-prename descclassname">numpygraph.lib.splitfile.</code><code class="sig-name descname">SplitFile</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">_from</em>, <em class="sig-param">_to</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>分片文件</p>
+<dl class="method">
+<dt id="numpygraph.lib.splitfile.SplitFile.split">
+<em class="property">static </em><code class="sig-name descname">split</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">num</em>, <em class="sig-param">jump=0</em>, <em class="sig-param">dist_random=False</em>, <em class="sig-param">single_threshold=1048576</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>dist_random: 文件是否采用随机切割
+True: 随机切割
+False: 均匀切割
+single_threshold: 文件小于该值不做切割</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="numpygraph.lib.splitfile.SplitFile.tell">
+<code class="sig-name descname">tell</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.tell" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-numpygraph.lib">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-numpygraph.lib" title="Permalink to this headline">¶</a></h2>
+<p>Directory structure “lib” means same as “utils” or “tools” imitated from Numpy repository</p>
+<dl class="class">
+<dt id="numpygraph.lib.CommandClient">
+<em class="property">class </em><code class="sig-prename descclassname">numpygraph.lib.</code><code class="sig-name descname">CommandClient</code><a class="headerlink" href="#numpygraph.lib.CommandClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="numpygraph.lib.CommandClient.main">
+<code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.CommandClient.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

@@ -97,11 +97,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-context-module">numpygraph.context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.context">numpygraph.context module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-dag-load-module">numpygraph.dag_load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-load-module">numpygraph.load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-mergeindex-module">numpygraph.mergeindex module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-read-module">numpygraph.read module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.load">numpygraph.load module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.mergeindex">numpygraph.mergeindex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.read">numpygraph.read module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph">Module contents</a></li>
 </ul>
 </li>
@@ -185,11 +185,47 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="numpygraph-lib-npg-command-module">
-<h2>numpygraph.lib.npg.command module<a class="headerlink" href="#numpygraph-lib-npg-command-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-numpygraph.lib.npg.command">
+<span id="numpygraph-lib-npg-command-module"></span><h2>numpygraph.lib.npg.command module<a class="headerlink" href="#module-numpygraph.lib.npg.command" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="numpygraph.lib.npg.command.SQLCompleter">
+<em class="property">class </em><code class="sig-prename descclassname">numpygraph.lib.npg.command.</code><code class="sig-name descname">SQLCompleter</code><a class="headerlink" href="#numpygraph.lib.npg.command.SQLCompleter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">prompt_toolkit.completion.base.Completer</span></code></p>
+<dl class="method">
+<dt id="numpygraph.lib.npg.command.SQLCompleter.get_completions">
+<code class="sig-name descname">get_completions</code><span class="sig-paren">(</span><em class="sig-param">document</em>, <em class="sig-param">complete_event</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.npg.command.SQLCompleter.get_completions" title="Permalink to this definition">¶</a></dt>
+<dd><p>This should be a generator that yields <code class="xref py py-class docutils literal notranslate"><span class="pre">Completion</span></code> instances.</p>
+<p>If the generation of completions is something expensive (that takes a
+lot of time), consider wrapping this <cite>Completer</cite> class in a
+<cite>ThreadedCompleter</cite>. In that case, the completer algorithm runs in a
+background thread and completions will be displayed as soon as they
+arrive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>document</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code> instance.</p></li>
+<li><p><strong>complete_event</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">CompleteEvent</span></code> instance.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="numpygraph.lib.npg.command.CommandClient">
+<em class="property">class </em><code class="sig-prename descclassname">numpygraph.lib.npg.command.</code><code class="sig-name descname">CommandClient</code><a class="headerlink" href="#numpygraph.lib.npg.command.CommandClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="numpygraph.lib.npg.command.CommandClient.main">
+<code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.npg.command.CommandClient.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-numpygraph.lib.npg">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-numpygraph.lib.npg" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

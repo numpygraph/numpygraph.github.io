@@ -97,11 +97,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-context-module">numpygraph.context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.context">numpygraph.context module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-dag-load-module">numpygraph.dag_load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-load-module">numpygraph.load module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-mergeindex-module">numpygraph.mergeindex module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#numpygraph-read-module">numpygraph.read module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.load">numpygraph.load module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.mergeindex">numpygraph.mergeindex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph.read">numpygraph.read module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpygraph.html#module-numpygraph">Module contents</a></li>
 </ul>
 </li>
@@ -183,8 +183,29 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="numpygraph-datasets-make-neo4j-csv-module">
-<h2>numpygraph.datasets.make_neo4j_csv module<a class="headerlink" href="#numpygraph-datasets-make-neo4j-csv-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-numpygraph.datasets.make_neo4j_csv">
+<span id="numpygraph-datasets-make-neo4j-csv-module"></span><h2>numpygraph.datasets.make_neo4j_csv module<a class="headerlink" href="#module-numpygraph.datasets.make_neo4j_csv" title="Permalink to this headline">¶</a></h2>
+<p>Lite version of scipy.linalg.
+.. rubric:: Notes</p>
+<p>Reference:
+<a class="reference external" href="https://neo4j.com/docs/operations-manual/current/tutorial/neo4j-admin-import/">https://neo4j.com/docs/operations-manual/current/tutorial/neo4j-admin-import/</a>
+<a class="reference external" href="https://neo4j.com/docs/cypher-manual/current/syntax/values/">https://neo4j.com/docs/cypher-manual/current/syntax/values/</a>
+The property types:
+Number, an abstract type, which has the subtypes Integer and Float
+String
+Boolean
+The spatial type Point
+Temporal types: Date, Time, LocalTime, DateTime, LocalDateTime and Duration</p>
+<dl class="function">
+<dt id="numpygraph.datasets.make_neo4j_csv.random_string">
+<code class="sig-prename descclassname">numpygraph.datasets.make_neo4j_csv.</code><code class="sig-name descname">random_string</code><span class="sig-paren">(</span><em class="sig-param">len</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.datasets.make_neo4j_csv.random_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="numpygraph.datasets.make_neo4j_csv.graph_generator">
+<code class="sig-prename descclassname">numpygraph.datasets.make_neo4j_csv.</code><code class="sig-name descname">graph_generator</code><span class="sig-paren">(</span><em class="sig-param">graph_path</em>, <em class="sig-param">node_type_cnt</em>, <em class="sig-param">node_cnt</em>, <em class="sig-param">edge_cnt</em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.datasets.make_neo4j_csv.graph_generator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-numpygraph.datasets">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-numpygraph.datasets" title="Permalink to this headline">¶</a></h2>
