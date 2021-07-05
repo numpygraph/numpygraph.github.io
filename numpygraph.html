@@ -100,7 +100,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-numpygraph.context">numpygraph.context module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#numpygraph-dag-load-module">numpygraph.dag_load module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-numpygraph.dag_load">numpygraph.dag_load module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-numpygraph.load">numpygraph.load module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-numpygraph.mergeindex">numpygraph.mergeindex module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-numpygraph.read">numpygraph.read module</a></li>
@@ -216,7 +216,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="numpygraph.test.html">numpygraph.test package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="numpygraph.test.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="numpygraph.test.html#numpygraph-test-dataset-load-test-module">numpygraph.test.dataset_load_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numpygraph.test.html#module-numpygraph.test.dataset_load_test">numpygraph.test.dataset_load_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="numpygraph.test.html#module-numpygraph.test.dataset_make_test">numpygraph.test.dataset_make_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="numpygraph.test.html#module-numpygraph.test.graph_api_text">numpygraph.test.graph_api_text module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="numpygraph.test.html#module-numpygraph.test.hello_test">numpygraph.test.hello_test module</a></li>
@@ -345,8 +345,84 @@
 </dd></dl>
 
 </div>
-<div class="section" id="numpygraph-dag-load-module">
-<h2>numpygraph.dag_load module<a class="headerlink" href="#numpygraph-dag-load-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-numpygraph.dag_load">
+<span id="numpygraph-dag-load-module"></span><h2>numpygraph.dag_load module<a class="headerlink" href="#module-numpygraph.dag_load" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="numpygraph.dag_load.end">
+<span class="sig-prename descclassname"><span class="pre">numpygraph.dag_load.</span></span><span class="sig-name descname"><span class="pre">end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.dag_load.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Workaround function to put into EndTask.</p>
+<p>This function can be put into EndTask, taking several return values of previous Tasks so that the enclosing DAG
+would wait for all Tasks to end.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> (<em>any</em>) – any return value of previous Tasks</p></li>
+<li><p><strong>kwargs</strong> – any return value of previous Tasks</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>always 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numpygraph.dag_load.split_helper">
+<span class="sig-prename descclassname"><span class="pre">numpygraph.dag_load.</span></span><span class="sig-name descname"><span class="pre">split_helper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">single_tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">part</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.dag_load.split_helper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Workaround function to split return values of Task.</p>
+<p>This function can be put into Task, returning the “part“‘s element of the single_tuple that might be a mixed large tuple of several return values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>single_tuple</strong> (<em>any subscriptable object</em>) – the mixed tuple</p></li>
+<li><p><strong>part</strong> (<em>int</em>) – the index number</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the desired part of the tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numpygraph.dag_load.dag_load">
+<span class="sig-prename descclassname"><span class="pre">numpygraph.dag_load.</span></span><span class="sig-name descname"><span class="pre">dag_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.dag_load.dag_load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the whole graph.</p>
+<p>This function wraps all loading functions inside a DAG (please refer to tinydag) containing individual load functions as tasks. File dependency of the tasks are solved by passing file lists between tasks and each task only fetching files they intend to read from arguments passed in.</p>
+<p>Internal details:
+There are three DAGs for relation loading and one DAG for node loading:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Relation loading:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">relationship2indexarray</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">merge_index_array_then_sort</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relation_loading</span></code> that nests the previous two</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Node loading:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_loading</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>With all dependencies expressed in arguments that each Task takes and return values of the Tasks, the DAGs can be safely put together into the last DAG <code class="docutils literal notranslate"><span class="pre">loading</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_path</strong> (<em>str</em>) – path to dataset of relations and nodes.</p></li>
+<li><p><strong>graph_path</strong> (<em>str</em>) – path to the target directory where all intermediate result and dump files to be stored.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object <a class="reference internal" href="#numpygraph.context.Context" title="numpygraph.context.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpygraph.context.Context</span></code></a> after import, containing info about node type hash, dataset_path, graph_path, etc.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="module-numpygraph.load">
 <span id="numpygraph-load-module"></span><h2>numpygraph.load module<a class="headerlink" href="#module-numpygraph.load" title="Permalink to this headline">¶</a></h2>
