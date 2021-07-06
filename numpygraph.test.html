@@ -189,27 +189,62 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.test.dataset_load_test.mock">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.test.dataset_load_test.</span></span><span class="sig-name descname"><span class="pre">mock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.dataset_load_test.mock" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Generate node files and relationship files.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.test.dataset_load_test.dump">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.test.dataset_load_test.</span></span><span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.dataset_load_test.dump" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Step that load all nodes and relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>context after all loading process</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.test.dataset_load_test.sample">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.test.dataset_load_test.</span></span><span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.dataset_load_test.sample" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Step that attempts to read from numpygraph database.</p>
+<dl class="simple">
+<dt>If everything is working, this function should print:</dt><dd><ul class="simple">
+<li><p>“Edge:” a random relation</p></li>
+<li><p>“Sample Node Type:” a first node from the relation</p></li>
+<li><p>“Sample Node ID:”  node id (node hash) of this node</p></li>
+<li><p>“Another Node Type:” the other node from the relation (the second node)</p></li>
+<li><p>“Another Node ID:” node id of the other node</p></li>
+<li><p>“Node Attr:” attributes of the first node (excluding strs)</p></li>
+<li><p>“Neighbor nodes:” neighbor nodes of the first node</p></li>
+<li><p>“Neighbor nodes’ attrs:” attribute of the neighbor nodes</p></li>
+<li><p>“Edge Attr:” find the attribute of the edge between the two previous nodes</p></li>
+<li><p>“Neighbor Edges:” edges incident to the first node</p></li>
+<li><p>“Randomly selected edges around a certain node:” … around the first node</p></li>
+<li><p>“Sample nodes with degree:”: starting from the first node; do a depth search of depth 3, limiting the number of nodes in each level to be 4; print all nodes traveled in the depth tree</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<a class="reference internal" href="numpygraph.html#numpygraph.context.Context" title="numpygraph.context.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpygraph.context.Context</span></code></a>) – context returned from dump() function</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>no return value</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.test.dataset_load_test.clean">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.test.dataset_load_test.</span></span><span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.dataset_load_test.clean" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Clean up all files generated (include relation files, node files, and log files (from tinydag))</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.test.dataset_load_test.test_pipeline">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.test.dataset_load_test.</span></span><span class="sig-name descname"><span class="pre">test_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.test.dataset_load_test.test_pipeline" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Test pipeline for numpygraph</p>
+</dd></dl>
 
 </div>
 <div class="section" id="module-numpygraph.test.dataset_make_test">

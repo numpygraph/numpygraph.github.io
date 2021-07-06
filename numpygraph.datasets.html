@@ -187,26 +187,39 @@
 </div>
 <div class="section" id="module-numpygraph.datasets.make_neo4j_csv">
 <span id="numpygraph-datasets-make-neo4j-csv-module"></span><h2>numpygraph.datasets.make_neo4j_csv module<a class="headerlink" href="#module-numpygraph.datasets.make_neo4j_csv" title="Permalink to this headline">¶</a></h2>
-<p>Lite version of scipy.linalg.
-.. rubric:: Notes</p>
+<p>Lite version of scipy.linalg.</p>
+<p class="rubric">Notes</p>
 <p>Reference:
 <a class="reference external" href="https://neo4j.com/docs/operations-manual/current/tutorial/neo4j-admin-import/">https://neo4j.com/docs/operations-manual/current/tutorial/neo4j-admin-import/</a>
-<a class="reference external" href="https://neo4j.com/docs/cypher-manual/current/syntax/values/">https://neo4j.com/docs/cypher-manual/current/syntax/values/</a>
-The property types:
-Number, an abstract type, which has the subtypes Integer and Float
-String
-Boolean
-The spatial type Point
-Temporal types: Date, Time, LocalTime, DateTime, LocalDateTime and Duration</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="numpygraph.datasets.make_neo4j_csv.random_string">
-<span class="sig-prename descclassname"><span class="pre">numpygraph.datasets.make_neo4j_csv.</span></span><span class="sig-name descname"><span class="pre">random_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">len</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.datasets.make_neo4j_csv.random_string" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<a class="reference external" href="https://neo4j.com/docs/cypher-manual/current/syntax/values/">https://neo4j.com/docs/cypher-manual/current/syntax/values/</a></p>
+<dl class="simple">
+<dt>The property types:</dt><dd><ul class="simple">
+<li><p>Number, an abstract type, which has the subtypes Integer and Float</p></li>
+<li><p>String</p></li>
+<li><p>Boolean</p></li>
+<li><p>The spatial type Point</p></li>
+<li><p>Temporal types: Date, Time, LocalTime, DateTime, LocalDateTime and Duration</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.datasets.make_neo4j_csv.graph_generator">
-<span class="sig-prename descclassname"><span class="pre">numpygraph.datasets.make_neo4j_csv.</span></span><span class="sig-name descname"><span class="pre">graph_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_type_cnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_cnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_cnt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.datasets.make_neo4j_csv.graph_generator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-prename descclassname"><span class="pre">numpygraph.datasets.make_neo4j_csv.</span></span><span class="sig-name descname"><span class="pre">graph_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_type_cnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_cnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_cnt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.datasets.make_neo4j_csv.graph_generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates csv files of relations and nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_graph</strong> (<em>str</em>) – path to write files</p></li>
+<li><p><strong>node_type_cnt</strong> (<em>int</em>) – number of node types</p></li>
+<li><p><strong>node_cnt</strong> (<em>int</em>) – number of nodes of each type</p></li>
+<li><p><strong>edge_cnt</strong> (<em>int</em>) – number of edges between each pair of node types</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>No return value</p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-numpygraph.datasets">

@@ -204,20 +204,29 @@
 <dt class="sig sig-object py" id="numpygraph.lib.splitfile.SplitFile">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.lib.splitfile.</span></span><span class="sig-name descname"><span class="pre">SplitFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_from</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_to</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>分片文件</p>
+<p>Split (csv) files into multiple parts with file cursors (smallest unit of split is a line), so that we can split dumping tasks, utilizing multiprocessing.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.lib.splitfile.SplitFile.split">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jump</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist_random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1048576</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.split" title="Permalink to this definition">¶</a></dt>
-<dd><p>dist_random: 文件是否采用随机切割
-True: 随机切割
-False: 均匀切割
-single_threshold: 文件小于该值不做切割</p>
+<dd><p>Split file into parts, returning a list of file pointers (that points into the file).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – path to target file being split</p></li>
+<li><p><strong>num</strong> (<em>int</em>) – number of slices to split into</p></li>
+<li><p><strong>jump</strong> (<em>int</em>) – number of lines to jump (maybe because they are headers)</p></li>
+<li><p><strong>dist_random</strong> (<em>int</em>) – whether split files with random lines in each slice</p></li>
+<li><p><strong>single_threshold</strong> (<em>int</em>) – least file size so that we split it 文件小于该值不做切割</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.lib.splitfile.SplitFile.tell">
 <span class="sig-name descname"><span class="pre">tell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.lib.splitfile.SplitFile.tell" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return current location of cursor in file.</p>
+</dd></dl>
 
 </dd></dl>
 

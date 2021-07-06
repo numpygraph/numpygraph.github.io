@@ -235,6 +235,28 @@
 <dt class="sig sig-object py" id="numpygraph.context.Context">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">numpygraph.context.</span></span><span class="sig-name descname"><span class="pre">Context</span></span><a class="headerlink" href="#numpygraph.context.Context" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>Context class that stores information required through the loading process. Information stored inside includes:</dt><dd><ul class="simple">
+<li><p>dataset: path to the dataset folder where all node and relation files lies</p></li>
+<li><p>graph: path to the graph folder where all intermediate result rests</p></li>
+<li><p>relation_files: list of relation files in the dataset folder</p></li>
+<li><p>node_files: list of node files in the dataset folder (this and relation_files are for solving file dependencies)</p></li>
+<li><p>NODE_TYPE: dict of node types to their hash values</p></li>
+<li><p>NODE_FILE: dict of node files to hash values</p></li>
+<li><p>HASH_NODE_TYPE: dict of hash values of node types to node types</p></li>
+<li><p>HASH_SHORT_NODE_TYPE: dict of short hash values of node types to node typescript</p></li>
+<li><p>HASH_NODE_FILE: dict of hash values of node files to node files</p></li>
+<li><p>node_attr_type: dict of node type to their attributes’ types</p></li>
+<li><p>node_attr_type_without_str: dict of node type to their attributes’ type, without str type, which cannot be put into <a class="reference internal" href="numpygraph.core.html#module-numpygraph.core.arraylist" title="numpygraph.core.arraylist"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpygraph.core.arraylist</span></code></a> or <a class="reference internal" href="numpygraph.core.html#module-numpygraph.core.arraydict" title="numpygraph.core.arraydict"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpygraph.core.arraydict</span></code></a>. We would record file pointers to str type.</p></li>
+<li><p>node_attr_name and node_attr_name_without_str: dict of node type to their attributes’ names, str excluded in the latter for the same reason as above.</p></li>
+<li><p>valid_attrs: dict of node type to list of attributes’s types they own</p></li>
+<li><p>edge_attr_type, edge_attr_name: similar as those of nodes’</p></li>
+<li><p>node_type_path, node_file_path: file path to json file that stores NODE_TYPE and NODE_FILE for next time’s loading</p></li>
+<li><p>closed: mark the end of context loading process</p></li>
+<li><p>node_attr_chunk_num, node_csv_chunk_num: not used yet</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.load_loc">
 <span class="sig-name descname"><span class="pre">load_loc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.context.Context.load_loc" title="Permalink to this definition">¶</a></dt>
@@ -243,7 +265,19 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.load_context">
 <span class="sig-name descname"><span class="pre">load_context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.context.Context.load_context" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Function that loads context (and closes it after finished).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_path</strong> (<em>str</em>) – path to dataset of node csv files and relation csv files</p></li>
+<li><p><strong>graph_path</strong> (<em>str</em>) – path to intermediate result path</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.prepare_nodes">
@@ -260,7 +294,16 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.node_type_hash">
 <span class="sig-name descname"><span class="pre">node_type_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.context.Context.node_type_hash" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Return hash value of given node type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>col</strong> (<em>str</em>) – node type</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the corresponding hash value</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.node_file_hash">
@@ -275,17 +318,35 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.load_node_type_hash">
 <span class="sig-name descname"><span class="pre">load_node_type_hash</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.context.Context.load_node_type_hash" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load node type from previously stored json file (probably comming from a previous session).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.load_node_file_hash">
 <span class="sig-name descname"><span class="pre">load_node_file_hash</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.context.Context.load_node_file_hash" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Load node files from previous json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.close">
 <span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.context.Context.close" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Denote that writing to Context is done, no more further changed to Context will be applied.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpygraph.context.Context.query_type">
@@ -394,7 +455,13 @@ There are three DAGs for relation loading and one DAG for node loading:</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt>Relation loading:</dt><dd><ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">relationship2indexarray</span></code></p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">relationship2indexarray</span></code>:</dt><dd><ul>
+<li><p><a class="reference internal" href="#numpygraph.load.lines_sampler" title="numpygraph.load.lines_sampler"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpygraph.load.lines_sampler()</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">merge_index_array_then_sort</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">relation_loading</span></code> that nests the previous two</p></li>
 </ul>
@@ -429,7 +496,8 @@ There are three DAGs for relation loading and one DAG for node loading:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.load.lines_sampler">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.load.</span></span><span class="sig-name descname"><span class="pre">lines_sampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relationship_files</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.load.lines_sampler" title="Permalink to this definition">¶</a></dt>
-<dd><p>对图数据集做采样统计, 供后续估计hash空间使用, 提升导入效率</p>
+<dd><p>Sample relation files for the following hashing
+对图数据集做采样统计, 供后续估计hash空间使用, 提升导入效率</p>
 </dd></dl>
 
 <dl class="py function">
@@ -509,13 +577,14 @@ There are three DAGs for relation loading and one DAG for node loading:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.mergeindex.merge_mem_array">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.mergeindex.</span></span><span class="sig-name descname"><span class="pre">merge_mem_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mems</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.mergeindex.merge_mem_array" title="Permalink to this definition">¶</a></dt>
-<dd><p>合并 memmap</p>
+<dd><p>Helper function that merges a list of np.array into one np.array. Used to merge memmaps in MergeIndex.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpygraph.mergeindex.unique_inplace">
 <span class="sig-prename descclassname"><span class="pre">numpygraph.mergeindex.</span></span><span class="sig-name descname"><span class="pre">unique_inplace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mergesort'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpygraph.mergeindex.unique_inplace" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Helper function that sorts and extracts unique items from a list.</p>
+</dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpygraph.mergeindex.MergeIndex">
